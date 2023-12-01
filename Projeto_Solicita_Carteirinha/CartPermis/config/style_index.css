@@ -1,0 +1,30 @@
+﻿@charset "UTF-8";
+
+/* Estrutura do Layout - Inicio */
+
+#logo {
+	position: relative;
+	border-style: solid;
+        border-width: 0px;
+        top:  0px;
+        left: 0px;
+	border-radius: 0px 0px 0px 0px;
+}
+
+/* Estrutura do Login - Inicio */
+
+#V_CD_PESSOA{
+	background-color:#ffffff;
+	height:20px;
+	width:200px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+.login	{
+	background-color:#FFFFFF;
+	border:solid 1px #666666;
+	height:22px;
+	border-radius: 4px 4px 4px 4px;
+}
+
+/* Estrutura do Login - Fim */
