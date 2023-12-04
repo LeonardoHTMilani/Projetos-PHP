@@ -8,6 +8,7 @@
   <title>Solicitação de Carteirinha</title>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
 	
 
 <!-- O java script a seguir tem por objetivo validar o conteúdo dos campos e ... -->
@@ -103,6 +104,22 @@ function mascaraData( campo, e )
 			campo.value = data;
 	}
 }
+/*
+//Mascara de carteirinha
+	$(document).ready(function(){
+	$('.mascaraCarteirinha').mask("999.999999999999.9");}
+);
+
+//Mascara do CPF
+$(document).ready(function(){
+	$('.mascaraCPF').mask("999.999.999-99");}
+);
+
+//Mascara da data com /
+$(document).ready(function(){
+	$('.mascaraNasc').mask("99/99/9999");}
+);*/
+
    /* Função fecha a tela */
 function fechaTela(){
 	window.close();
@@ -223,12 +240,12 @@ justify-content: center; /* Justifica o texto  */
           <form method="post" action="reinicia.php" name="form" onSubmit="return valida()">
 	
 			<p id='textos'>Carteirinha</p>
-			<input name="V_CD_PESSOA" id="V_CD_PESSOA"  maxlength="16" type="text" required="" OnKeyUp="mascara( this,event,'numero');" />
-			<div id="textosRetorno"><font color="red"><b>*Por favor, retirar o primeiro '0' da carteirinha. Ex: 0140.. - 140..</b></font><div>
+			<input name="V_CD_PESSOA" id="V_CD_PESSOA"  placeholder="Ex. 140.301500129800.5" maxlength="16" type="text" required="" OnKeyUp="mascara(this,event,'numero');"/>
+			<!--<div id="textosRetorno"><font color="red"><b>*Por favor, retirar o primeiro '0' da carteirinha. Ex: 0140.. - 140..</b></font><div>-->
             <p id='textos'>CPF</p>
-            <input name="V_NR_CPF" id="V_NR_CPF"   maxlength="11" type="text" required="" OnKeyUp="mascara( this,event,'numero');" />
+            <input name="V_NR_CPF" id="V_NR_CPF"  placeholder="Ex. 123.456.789-10" maxlength="11" type="text" required="" OnKeyUp="mascara(this,event,'numero');"/>
             <p id='textos'>Data de Nascimento</p>
-	        <input name="V_DT_NASCI" id="V_DT_NASCI" maxlength="10" type="text" class="form-control" OnKeydown="mascaraData2(this,event)" style='width:102%; height: 1.7rem; font-size:15px'/>
+	        <input name="V_DT_NASCI" id="V_DT_NASCI" maxlength="10" type="text" class="form-control" OnKeydown="mascaraData2(this,event)" style='width:100%; height: 1.5rem; font-size:15px'/>
 			<br>
 			<p id='textos'>Deseja que sua carteirinha seja impressa?</p>
 			<div style=" text-align:center">
